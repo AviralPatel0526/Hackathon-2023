@@ -1,49 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-* {
-	box-sizing: border-box;
-}
 
-body {
-	background: #f6f5f7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
-	margin: -20px 0 50px;
-}
 
-h1 {
-	font-weight: bold;
-	margin: 0;
-}
 
-h2 {
-	text-align: center;
-}
 
-p {
-	font-size: 14px;
-	font-weight: 100;
-	line-height: 20px;
-	letter-spacing: 0.5px;
-	margin: 20px 0 30px;
-}
 
-span {
-	font-size: 12px;
-}
 
-a {
+
+
+
+.social {
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
 }
 
-button {
+.ghost {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
@@ -56,20 +29,20 @@ button {
 	transition: transform 80ms ease-in;
 }
 
-button:active {
+.ghost:active {
 	transform: scale(0.95);
 }
 
-button:focus {
+.ghost:focus {
 	outline: none;
 }
 
-button.ghost {
+.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
 
-form {
+.sign{
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -79,8 +52,13 @@ form {
 	height: 100%;
 	text-align: center;
 }
+@media(width <= 750px){
+	.sign{
+		padding: 0;
+	}
+}
 
-input {
+.signInput {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -159,9 +137,9 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
+	background:#f97316;
 	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #ea580c,#fb923c);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
