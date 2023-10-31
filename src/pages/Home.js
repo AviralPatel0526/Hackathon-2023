@@ -1,11 +1,12 @@
 import React from 'react'
-
+import Homesection1 from '../components/Homesection1'
+import Navbar from "../components/Navbar.js"
 const Home = () => {
   return (
-    <div>
-
-   
-    </div>
+   <>
+   <Navbar/>
+   <Homesection1/>
+   </>
   )
 }
 
