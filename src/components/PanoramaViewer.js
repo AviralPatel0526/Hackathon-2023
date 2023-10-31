@@ -3,11 +3,11 @@ import * as PANOLENS from 'panolens';
 import * as THREE from 'three';
 import image from '../assets/image1.jpeg';
 
-const PanoramaViewer = () => {
+const PanoramaViewer = (prop) => {
   const viewerRef = useRef(null);
 
   useEffect(() => {
-    const panoramaImage = new PANOLENS.ImagePanorama(image);
+    const panoramaImage = new PANOLENS.ImagePanorama(prop.image);
     const viewer = new PANOLENS.Viewer({
       container: viewerRef.current,
       autoRotate: true,

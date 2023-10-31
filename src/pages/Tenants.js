@@ -35,6 +35,7 @@ function Tenants() {
           address={tenant.Address}
           size={tenant.Size}
           rent={tenant.Rent}
+          id={tenant.id}
           />
         )
       })}
