@@ -13,11 +13,11 @@ function Navbar() {
     <div className='h-[10vh] flex justify-between items-center p-4'>
       <div><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc57725c-8ab0-43ad-a8c1-24eb43956f47?apiKey=0e2d2b3fdaa848b2ac6dc9f62f11a5f8"/></div>
       <div className='md:flex h-[10vh] justify-center items-center gap-14 hidden'>
-        <div className='hover:scale-110'><a href="">Home</a></div>
-        <div className='hover:scale-110'><a href="">For Tenants</a></div>
-        <div className='hover:scale-110'><a href="">For Owners</a></div>
+        <div className='hover:scale-110'><a href="/">Home</a></div>
+        <div className='hover:scale-110'><a href="/Tenants">For Tenants</a></div>
+        <div className='hover:scale-110'><a href="/Owners">For Owners</a></div>
         <div className='hover:scale-110'><a href="">Login</a></div>
-        <div className='border-[1px] border-black p-2 rounded-lg hover:scale-110'><button><a href="">SignUp</a></button></div>
+        <div className='border-[1px] border-black p-2 rounded-lg hover:scale-110'><button><a href="/SignUp">SignUp</a></button></div>
        
       </div>
     <div className='md:hidden '><button onClick={handleClick} className='text-white rounded-[50%]'><img className='h-[36px] w-[36px]' src={Hamburger} alt="" /></button></div>
