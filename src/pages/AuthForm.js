@@ -83,68 +83,23 @@ function AuthForm() {
 
 
  const navigate = useNavigate();
-  // const handleGoogleSignUp = async () => {
-  //   try {
-  //     await signInWithPopup(auth, googleProvider)
-  //     .then((userCredential)=>{
-  //       const user = userCredential.user;
-  //       console.log(user);
-  //       setTimeout(()=>{
-  //         alert("Registered Successfully!!");
-  //         // document.getElementById('signup').style.display = 'none';     
-  //         // document.getElementById('logout').style.display='block';
-  //         // document.getElementById('data').style.display = 'block';
-  //       },1000)
-  //     })
-  //     navigate("/");
-  //   } catch (error) {
-  //     console.error('Google sign-up failed:', error.message);
-  //   }
-  // }
-  // const [value,setValue] = useState('')
-  // const  handleGoogleSignUp=()=>{
-  //     signInWithPopup(auth,googleProvider).then((data)=>{
-  //         setValue(data.user.email)
-  //         localStorage.setItem("email",data.user.email)
-  //     })
-  // }
-
-  // useEffect(()=>{
-  //     setValue(localStorage.getItem('email'))
-  // })
-
-  // const handleGoogleSignIn = async () => {
-  //   try {
-  //     await signInWithPopup(auth, googleProvider)
-  //       .then((userCredential) => {
-  //         const user = userCredential.user;
-  //         console.log(user);
-  //         setTimeout(() => {
-  //           alert("Sign In with Google Successful!!");
-  //           // Add any additional logic or redirect the user after successful sign-in
-  //         }, 1000);
-  //       });
-  //     navigate("/");
-  //   } catch (error) {
-  //     console.error('Google sign-in failed:', error.message);
-  //   }
-  // };
-
-  const handleGoogleSignUp = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        const name = result.user.displayName;
-        const email = result.user.email;
-       // const profilePic = result.user.photoURL;
-  
-        localStorage.setItem("name", name);
-        localStorage.setItem("email", email);
-        //localStorage.setItem("profilePic", profilePic);
+ const handleGoogleSignUp= async()=>{
+  try{
+      await signInWithPopup(auth, googleProvider)
+      .then((userCredential)=>{
+        const user = userCredential.user;
+        console.log(user);
+        setTimeout(()=>{
+          alert("Registered Successfully!!");
+          document.getElementById('signup').style.display = 'none';     
+          document.getElementById('logout').style.display='block';
+        },1000)
       })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+      navigate("/");
+  }catch(err){
+      console.log(err);
+  }
+}
   
 
   return (

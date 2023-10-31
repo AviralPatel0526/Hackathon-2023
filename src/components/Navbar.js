@@ -16,8 +16,8 @@ function Navbar() {
         <div className='hover:scale-110'><a href="/">Home</a></div>
         <div className='hover:scale-110'><a href="/Tenants">For Tenants</a></div>
         <div className='hover:scale-110'><a href="/Owners">For Owners</a></div>
-        <div className='hover:scale-110'><a href="">Login</a></div>
-        <div className='border-[1px] border-black p-2 rounded-lg hover:scale-110'><button><a href="/SignUp">SignUp</a></button></div>
+        <div id="signup" className='border-[1px] border-black p-2 rounded-lg hover:scale-110'><button><a href="/SignUp">SignUp</a></button></div>
+        <div id="logout" className='border-[1px] border-black p-2 rounded-lg hover:scale-110 hidden'><button>Log Out</button></div>
        
       </div>
     <div className='md:hidden '><button onClick={handleClick} className='text-white rounded-[50%]'><img className='h-[36px] w-[36px]' src={Hamburger} alt="" /></button></div>
