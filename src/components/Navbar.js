@@ -7,7 +7,6 @@ function Navbar() {
       setShowMenu(!showMenu);
     }
   
-  
     return (
     <>
     <div className='h-[10vh] flex justify-between items-center p-4'>
