@@ -2,10 +2,11 @@ import React from 'react'
 import "./Homesection1.css"
 function Homesection1() {
   return (
-    <div className='w-full h-[90vh] Homesection1' >
-        <div className='flex justify-center items-center w-full h-[90vh]'>
-            <div className='w-[50%] text-center text-white text-2xl font-bold'>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, deleniti, natus accusantium in quae voluptates sunt possimus explicabo ullam odit quis est repellat molestias voluptate molestiae dicta, facilis eligendi! Nemo, aut hic! Molestiae, facilis. Ipsam, ipsum laudantium autem fugit magni facilis? Dolores similique rerum ullam, vitae ex distinctio ea impedit!</p>
+    <div className='w-full md:h-[90vh] h-[60vh] Homesection1' >
+        <div className='flex justify-center items-start md:pt-36 pt-20 w-full h-[90vh]'>
+            <div className='md:w-[60%] w-[90vw] text-center text-white  font-bold'>
+              <h1 className='font-bold md:text-4xl sm:text-2xl text-xl mb-8'>Find a home you will love!</h1>
+            <p className='md:text-[22px] sm:text-xl text-[15px] font-semibold'>"Welcome to Jadoo, where your dream home is just a click away. Discover a curated collection of properties, each tailored to fit your unique lifestyle. From cozy apartments to spacious family houses, we have options to suit every taste. Start your journey towards the perfect space with us today."</p>
         </div>
         </div>
     

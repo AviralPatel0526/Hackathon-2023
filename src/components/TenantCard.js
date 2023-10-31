@@ -32,6 +32,7 @@ function TenantCard(prop) {
             <div><input type="text" />{prop.address}</div>
             <div><input type="text" />{prop.size}</div>
             <div><input type="text" />{prop.rent}</div>
+         
             <div><button onClick={() => openReport(prop.id)}>watch in vr</button></div>
         </div>
     </div>
