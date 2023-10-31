@@ -39,7 +39,7 @@ function TenantCard(prop) {
 
       {showReport && (
         <PanoramaViewer
-        image={filteredData.image}
+        image={filteredData.ImageURL}
         />
       )}
     </>
