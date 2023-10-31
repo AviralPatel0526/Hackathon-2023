@@ -42,6 +42,8 @@ function AuthForm() {
            // document.getElementById('signup').style.display = 'none'; 
             //document.getElementById('data').style.display= 'block';  
            // document.getElementById('logout').style.display = 'block';
+           document.getElementById('signup').style.display = 'none';     
+            document.getElementById('logout').style.display='block';
           },1000)
         })
         navigate("/"); 
@@ -71,6 +73,8 @@ function AuthForm() {
             //document.getElementById('signup').style.display = 'none';     
             //document.getElementById('logout').style.display='block';
             //document.getElementById('data').style.display = 'block';
+            document.getElementById('signup').style.display = 'none';     
+            document.getElementById('logout').style.display='block';
           },1000)
         })
        navigate("/"); 
