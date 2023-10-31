@@ -27,6 +27,8 @@ function Tenants() {
 
   return (
     <div>
+      <a href="/NewTenantForm"><button>ADD NEW Tenant</button></a>
+
      {tenantList.map((tenant) => {
         return (
           <TenantCard

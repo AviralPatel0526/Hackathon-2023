@@ -29,9 +29,9 @@ function TenantCard(prop) {
             <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcT49PBpnFBJNlDx_73B0CguaQy9vmF09quzI4ZKlBgWtAV1fSemOlKiHYXyS-O3HTw1aDWrf-dc-omXddw" alt="" className='h-[60vh]'/>
         </div>
         <div className='w-[40vw] h-[60vh] flex flex-col justify-evenly items-center'>
-            <div><input type="text" />{prop.address}</div>
-            <div><input type="text" />{prop.size}</div>
-            <div><input type="text" />{prop.rent}</div>
+            <div>{prop.address}</div>
+            <div>{prop.size}</div>
+            <div>{prop.rent}</div>
          
             <div><button onClick={() => openReport(prop.id)}>watch in vr</button></div>
         </div>

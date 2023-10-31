@@ -5,7 +5,7 @@ import Homesection2 from '../sections/Homesection2'
 import Carousel from '../sections/Carousal'
 import Footer from '../components/Footer'
 import Steps from '../sections/Steps'
-import TenantCard2 from '../components/TenantCard2'
+
 const Home = () => {
   return (
    <>
@@ -15,7 +15,6 @@ const Home = () => {
    <Carousel/>
    <Steps/>
    <Footer/>
-   <TenantCard2/>
    </>
   )
 }
