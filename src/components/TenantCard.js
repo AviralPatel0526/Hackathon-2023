@@ -25,19 +25,37 @@ function TenantCard(prop) {
   }
 
   return (
-    <div className="w-full h-full flex bg-slate-400">
-      <div className="w-1/2 h-full"> 
-        <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcT49PBpnFBJNlDx_73B0CguaQy9vmF09quzI4ZKlBgWtAV1fSemOlKiHYXyS-O3HTw1aDWrf-dc-omXddw" alt="" className="h-full w-full" />
+    <div className="w-full h-full flex justify-center my-10">
+      <div className=' bg-slate-400 w-[60%] h-[60vh] flex rounded-2xl'>
+      <div className="w-[37%] h-full rounded-2xl flex justify-center items-center"> 
+        <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcT49PBpnFBJNlDx_73B0CguaQy9vmF09quzI4ZKlBgWtAV1fSemOlKiHYXyS-O3HTw1aDWrf-dc-omXddw" alt="" className="h-[80%] w-[80%] rounded-2xl" />
       </div>
-      <div className="w-1/2 h-full flex flex-col justify-evenly items-center">
-        <div>{prop.address}</div>
-        <div>{prop.size}</div>
-        <div>{prop.rent}</div>
-        <div>
-          <button onClick={() => openReport(prop.id)}>watch in vr</button>
+      <div className="w-auto h-full flex flex-col  items-center rounded-2xl">
+        <div>Price: 34756</div>
+        <div className='flex gap-4'>
+         <div><h1>2BHK</h1></div>
+         <div>for rent</div>
+         </div>
+         <div className='flex gap-4'>
+         <div >
+          <p>Owner:</p>
+          <p>{prop.rent}</p>
+         </div>
+         <div>
+          <p>Owner:</p>
+          <p>{prop.size}</p>
+         </div>
+         </div>
+        
+        <div> adress: Nit raipur</div>
+        <div></div>
+        <div></div>
+        <div  >
+          <button className='px-6 py-2 bg-green-400 rounded-3xl'>Details</button>
+          <button className='px-6 py-2 bg-green-600 rounded-3xl' onClick={() => openReport(prop.id)}>Watch in AR</button>
         </div>
       </div>
-
+      </div>
       {showViewer && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-70">
           <div className="relative w-full h-full">
