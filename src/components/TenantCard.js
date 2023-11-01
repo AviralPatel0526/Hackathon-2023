@@ -32,7 +32,7 @@ function TenantCard(prop) {
             <div>{prop.address}</div>
             <div>{prop.size}</div>
             <div>{prop.rent}</div>
-         
+            <div>{prop.facility}</div>         
             <div><button onClick={() => openReport(prop.id)}>watch in vr</button></div>
         </div>
     </div>
