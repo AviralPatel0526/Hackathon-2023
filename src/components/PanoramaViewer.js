@@ -7,7 +7,7 @@ const PanoramaViewer = (prop) => {
   const viewerRef = useRef(null);
 
   useEffect(() => {
-    const panoramaImage = new PANOLENS.ImagePanorama(prop.image);
+    const panoramaImage = new PANOLENS.ImagePanorama(image);
     const viewer = new PANOLENS.Viewer({
       container: viewerRef.current,
       autoRotate: true,
