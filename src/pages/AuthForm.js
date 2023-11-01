@@ -6,6 +6,7 @@ import {useFormik} from 'formik';
 import {signUpSchema} from '../schemas'
 import { signInSchema } from '../schemas';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import googlelogo from "../assets/googlelogo.png"
 import './AuthForm.css';
 
 
@@ -112,17 +113,13 @@ function AuthForm() {
       <div className="form-container sign-up-container">
         {isSignUp && (
           <form className="sign" onSubmit={handleSubmit}>
-            <h1 className="font-bold m-0">Create Account</h1>
+            <h1 className="font-bold mb-2">Create Account</h1>
             {/* <div className="social-container">
               <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
               <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
               <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
             </div> */}
-             <div  className="text-black md:text-xl bg-orange-500 border-rounded mt-1 text-[15px] font-medium tracking-wide  cursor-pointer self-center ">
-                 
-                 <button onClick={handleGoogleSignUp} className="social">Sign Up With Google</button>
-              
-                   </div>
+            
             <span className="text-[12px]">or use your email for registration</span>
             <input  className="signInput" type="text" placeholder="Name"
                         name="name"
@@ -149,7 +146,10 @@ function AuthForm() {
             />{errors.password && touched.password ? (
               <p className="form-error text-red-600">{errors.password}</p>
             ) : null}
-            <button>Sign Up</button>
+             <button className='px-8 py-2 bg-orange-500 rounded-[25px] text-white'>Sign Up</button>
+            <div>
+                 <button onClick={handleGoogleSignUp} className="social px-10 py-1 rounded-[25px] border-[2px] border-black"><img src={googlelogo} alt="" /></button> 
+                 </div>
           </form>
 
           
@@ -159,11 +159,7 @@ function AuthForm() {
         {!isSignUp && (
           <form className="sign" onSubmit={handleSubmitSignIn} >
             <h1 className="font-bold m-0">Sign in</h1>
-            <div className="social-container">
-              <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
-              <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
-              <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
-            </div>
+           
             <span className="text-[12px]">or use your account</span>
             < input className="signInput"  type="email" placeholder="Email" 
                 name="email"
@@ -182,10 +178,10 @@ function AuthForm() {
               <p className="form-error text-red-600">{errorsSignIn.password}</p>
             ) : null}
             <a href="#">Forgot your password?</a>
-            <button>Sign In</button>
-            <div  className="text-black md:text-xl bg-orange-500 border-rounded mt-1 text-[15px] font-medium tracking-wide  cursor-pointer self-center ">
-                 
-                 <button onClick={handleGoogleSignUp} className="social">Sign In With Google</button>
+            <button className='px-8 py-2 bg-orange-500 rounded-[25px] text-white mt-4'>Sign In</button>
+           
+                <div>
+                 <button onClick={handleGoogleSignUp} className="social px-10 py-1 rounded-[25px] border-[2px] border-black"><img src={googlelogo} alt="" /></button>
               
                    </div>
           </form>
