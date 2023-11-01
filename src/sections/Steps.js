@@ -1,15 +1,42 @@
 import React from 'react'
-import inge from "../assets/h1.jpg"
+import steps from "../assets/steps.jpeg"
+import s1 from "../assets/map.svg"
+import s2 from "../assets/money.svg"
+import s3 from "../assets/car.svg"
 function Steps() {
   return (
   <>
-  <div className='w-full h-[70vh] flex mt-40 mb-20'>
-    <div className='w-[50%] h-[70vh] flex items-center flex-col justify-center'>
-    <h1 className='text-[40px] font-bold'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, labore.</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptatibus. Rem nemo ratione repellat saepe maiores quod enim tempore et praesentium culpa, sapiente ipsam suscipit vero sit necessitatibus odio a maxime! Labore soluta quibusdam nam dolore! Laudantium, illum quisquam provident ipsum maxime natus velit distinctio minus vel nisi assumenda excepturi!</p>
-    </div>
-    <div className='w-[50%] h-[70vh]'>
-      <div><img src={inge} alt="" className='w-[50vw] h-[70vh]' /></div>
+  <div className='w-[95vw] h-[60vh] flex justify-around mt-40 mb-20'>
+    <div className='w-[46%] h-[60vh] flex  flex-col justify-start gap-5'>
+   <div><h1 className='text-[40px] font-bold pb-10'>Book your home in three easy steps</h1></div> 
+
+  <div className='flex gap-4  pb-10'>
+    <div><img src={s1} alt="" /></div>
+    <div>
+      <h1>Choose Destination</h1>
+      <p>"Select your ideal locale. Start your property search today!"</p>
+      </div>
+
+  </div>
+  <div className='flex gap-4 pb-10'>
+    <div><img src={s2} alt="" /></div>
+    <div>
+      <h1>Choose Destination</h1>
+      <p>"Select your ideal locale. Start your property search today!"</p>
+      </div>
+
+  </div>
+  <div className='flex gap-4 pb-10'>
+    <div><img src={s3} alt="" /></div>
+    <div>
+      <h1>Choose Destination</h1>
+      <p>"Select your ideal locale. Start your property search today!"</p>
+      </div>
+      </div>
+  </div>
+    
+    <div className='w-[46%] h-[60vh]'>
+      <div><img src={steps} alt="" className='w-[46vw] h-[60vh] rounded-2xl shadow-2xl' /></div>
     </div>
   </div>
   </>

@@ -26,7 +26,8 @@ const Carousel = () => {
     <p className='text-2xl font-semibold'>Recommendation</p>
     <h1 className='text-[40px] font-bold'>Best homes in the best places</h1>
    </div>
-    <div className="relative overflow-hidden w-full h-[100vh]">
+   <div className='flex justify-center'>
+    <div className="relative overflow-hidden w-[95vw] sm:h-[90vh] h-[50vh] rounded-3xl">
       <div className="flex h-full">
         {images.map((image, index) => (
           <div
@@ -43,6 +44,7 @@ const Carousel = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
     </div>
     </>
