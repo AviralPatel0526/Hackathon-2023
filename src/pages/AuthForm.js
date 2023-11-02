@@ -8,7 +8,7 @@ import { signInSchema } from '../schemas';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import googlelogo from "../assets/googlelogo.png"
 import './AuthForm.css';
-
+import Navbar from "../components/Navbar"
 
 function AuthForm() {
   const [isSignUp, setIsSignUp] = useState(true);
@@ -108,7 +108,9 @@ function AuthForm() {
   
 
   return (
-   <div className='flex h-[100vh] w-[100%] items-center justify-center'>
+    <>
+    <Navbar/>
+   <div className='flex h-[90vh] w-[100%] items-center justify-center'>
     <div className={`container ${isSignUp ? 'right-panel-active' : ''}`}>
       <div className="form-container sign-up-container">
         {isSignUp && (
@@ -207,6 +209,7 @@ function AuthForm() {
       </div>
     </div>
     </div>
+    </>
   );
 }
 
