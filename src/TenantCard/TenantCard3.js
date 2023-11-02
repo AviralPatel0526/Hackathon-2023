@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import house from "../assets/house.jpg";
+import house from "../assets/Measuem.webp";
 import PanoramaViewer3 from '../PanoramaViewer/PanoramaViewer3';
 
 function TenantCard3() {
