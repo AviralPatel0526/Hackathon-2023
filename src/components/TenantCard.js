@@ -33,7 +33,7 @@ function TenantCard(prop) {
         <img src={prop.image} className='w-[80%] h-[80%] rounded-2xl'/>
       </div>
       <div className="w-[48%] h-full flex flex-col  items-start justify-evenly pl-5 rounded-2xl">
-        <div><p className='text-3xl font-bold'>{prop.price}</p></div>
+        <div><p className='text-3xl font-bold'>Price : ${prop.price}</p></div>
         <div className='flex gap-4 items-center '>
          <div><h1  className='text-3xl font-bold'>{prop.size}</h1></div>
          <div>for rent</div>
@@ -53,7 +53,7 @@ function TenantCard(prop) {
         <div></div>
         <div></div>
         <div className='flex gap-4' >
-          <button className='px-8 py-4 bg-green-400 border-[2px] border-green-800 rounded-3xl text-xl text-green-900 font-bold hover:scale-95'>Details</button>
+     
           <button className='px-8 py-4 bg-green-800 rounded-3xl text-white font-bold text-xl hover:scale-95' onClick={() => openReport(prop.id)}>Watch in AR</button>
         </div>
       </div>

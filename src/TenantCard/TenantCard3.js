@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import house from "../assets/Measuem.webp";
 import PanoramaViewer3 from '../PanoramaViewer/PanoramaViewer3';
+import TextToSpeech from '../components/TextToSpeech'
 
 function TenantCard3() {
   const [showViewer, setShowViewer] = useState(false);
@@ -17,6 +18,7 @@ function TenantCard3() {
   const closeViewer = () => {
     setShowViewer(false);
   }
+  const Text ="In the heart of Rivertown, the Rivertown Museum stands as a testament to the town's rich history, a labor of love by the community. It has become a hub of inspiration and education, welcoming visitors from all walks of life."
 
   return (
     <div className="w-full h-full flex justify-center my-10">
@@ -25,27 +27,28 @@ function TenantCard3() {
         <img src={house} className='w-[80%] h-[80%] rounded-2xl'/>
       </div>
       <div className="w-[48%] h-full flex flex-col  items-start justify-evenly pl-5 rounded-2xl">
-        <div><p className='text-3xl font-bold'>82731</p></div>
+        <div><p className='text-3xl font-bold'>Price : $800</p></div>
         <div className='flex gap-4 items-center '>
-         <div><h1  className='text-3xl font-bold'>2bhk</h1></div>
+         <div><h1  className='text-3xl font-bold'>2BHK</h1></div>
          <div>for rent</div>
          </div>
          <div className='flex gap-4'>
          <div className='flex gap-3'>
           <p>Owner Name:</p>
-          <p>aviral</p>
+          <p>Ayush</p>
          </div>
          <div className='flex gap-3'>
           <p>Carpet Area:</p>
-          <p>2341</p>
+          <p>500 x 500</p>
          </div>
          </div>
         
-        <div>Address: akljsdljasjla</div>
-        <div></div>
+        <div>Address: 385 Rivertown London</div>
+        <div><TextToSpeech text={Text}/></div>
+
         <div></div>
         <div className='flex gap-4' >
-          <button className='px-8 py-4 bg-green-400 border-[2px] border-green-800 rounded-3xl text-xl text-green-900 font-bold hover:scale-95'>Details</button>
+       
           <button className='px-8 py-4 bg-green-800 rounded-3xl text-white font-bold text-xl hover:scale-95' onClick={openReport}>Watch in AR</button>
         </div>
       </div>

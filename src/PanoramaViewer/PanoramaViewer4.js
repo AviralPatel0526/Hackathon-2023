@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as PANOLENS from 'panolens';
 import * as THREE from 'three';
-import image from '../assets/p3.jpeg';
+import image from '../assets/p7.jpg';
 
 const PanoramaViewer4 = (prop) => {
   const viewerRef = useRef(null);

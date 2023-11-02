@@ -15,9 +15,9 @@ const TextToSpeech = ({ text }) => {
   return (
     <div>
       <p>{text}</p>
-      <div>
-        <button onClick={handleSpeak}>Speak</button>
-        <button onClick={handleCancel}>Stop</button>
+      <div className='flex gap-3'>
+        <button onClick={handleSpeak} className='p-1 bg-green-800 rounded-3xl text-white font-bold'>Speak</button>
+        <button onClick={handleCancel} className='px-2 bg-green-800 rounded-3xl text-white font-bold'>Stop</button>
       </div>
     </div>
   );

@@ -13,7 +13,9 @@ function NewTenantForm() {
 
   const [newAddress, setNewAddress] = useState("");
   const [newSize, setNewSize] = useState("");
-  const [newRent, setNewRent] = useState("");
+  const [newPrice, setNewPrice] = useState("");
+  const [newArea, setNewArea] = useState("");
+  const [newOwnerName, setNewOwnerName] = useState("");
   const [imageUpload, setImageUpload] = useState(null);
   const navigate = useNavigate();
 
@@ -23,7 +25,7 @@ function NewTenantForm() {
     if (
       !newAddress ||
       !newSize ||
-      !newRent
+      !newOwnerName
     ) {
       setFormError("! All fields are required !");
       return false;
@@ -62,7 +64,9 @@ function NewTenantForm() {
             await addDoc(TenantCollectionRef, {
                 Address: newAddress,
                 Size: newSize,
-                Rent: newRent,
+                Area: newArea,
+                Price:newPrice,
+                OwnerName: newOwnerName,
                 userId: auth?.currentUser?.uid,
                 ImageURL: downloadURL,
             })
@@ -85,19 +89,19 @@ function NewTenantForm() {
   <div className='w-[40vw] h-[80vh] flex flex-col justify-evenly items-center rounded-l-3xl'>
         <div>
           <p>Name :</p>
-          <input onChange={(e) => setNewRent(e.target.value)} type="text" className='w-[35vw] h-10 rounded-3xl' /></div>
+          <input onChange={(e) => setNewOwnerName(e.target.value)} type="text" className='w-[35vw] h-10 rounded-3xl' /></div>
         
         <div className='flex gap-6'>
         <div>
           <p>Size</p>
-          <input onChange={(e) => setNewAddress(e.target.value)} type="text" className='w-[17vw] h-10 rounded-3xl'/></div>
+          <input onChange={(e) => setNewSize(e.target.value)} type="text" className='w-[17vw] h-10 rounded-3xl'/></div>
         <div>
           <p>Carpet Area:</p>
-          <input onChange={(e) => setNewSize(e.target.value)} type="text" className='w-[17vw] h-10 rounded-3xl'/></div>
+          <input onChange={(e) => setNewArea(e.target.value)} type="text" className='w-[17vw] h-10 rounded-3xl'/></div>
           </div>
           <div>
           <p>Price :</p>
-          <input onChange={(e) => setNewAddress(e.target.value)} type="text" className='w-[17vw] h-10 rounded-3xl'/></div>
+          <input onChange={(e) => setNewPrice(e.target.value)} type="text" className='w-[17vw] h-10 rounded-3xl'/></div>
           <div>
           <p>Address :</p>
           <input onChange={(e) => setNewAddress(e.target.value)} type="text" className='w-[35vw] h-20 rounded-3xl'/></div>

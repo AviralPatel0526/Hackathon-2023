@@ -1,8 +1,9 @@
 
+
 import React, { useEffect, useState } from 'react';
 import house from "../assets/house.jpg";
 import PanoramaViewer1 from '../PanoramaViewer/PanoramaViewer1';
-
+import TextToSpeech from '../components/TextToSpeech'
 function TenantCard1() {
   const [showViewer, setShowViewer] = useState(false);
 
@@ -17,6 +18,7 @@ function TenantCard1() {
   const closeViewer = () => {
     setShowViewer(false);
   }
+  const Text ="This house was built in 2020, It is a 2BHK house with 2 bathroom and kitchen."
 
   return (
     <div className="w-full h-full flex justify-center my-10">
@@ -25,27 +27,28 @@ function TenantCard1() {
         <img src={house} className='w-[80%] h-[80%] rounded-2xl'/>
       </div>
       <div className="w-[48%] h-full flex flex-col  items-start justify-evenly pl-5 rounded-2xl">
-        <div><p className='text-3xl font-bold'>82731</p></div>
+        <div><p className='text-3xl font-bold'>Price : $500</p></div>
         <div className='flex gap-4 items-center '>
-         <div><h1  className='text-3xl font-bold'>2bhk</h1></div>
+         <div><h1  className='text-3xl font-bold'>2BHK</h1></div>
          <div>for rent</div>
          </div>
          <div className='flex gap-4'>
          <div className='flex gap-3'>
           <p>Owner Name:</p>
-          <p>aviral</p>
+          <p>Aviral</p>
          </div>
          <div className='flex gap-3'>
           <p>Carpet Area:</p>
-          <p>2341</p>
+          <p>400 x 400</p>
          </div>
          </div>
         
-        <div>Address: akljsdljasjla</div>
-        <div></div>
+        <div>Address: 384A/B P.D. Nagar Unnao</div>
+        <div><TextToSpeech text={Text}/></div>
+       
         <div></div>
         <div className='flex gap-4' >
-          <button className='px-8 py-4 bg-green-400 border-[2px] border-green-800 rounded-3xl text-xl text-green-900 font-bold hover:scale-95'>Details</button>
+        
           <button className='px-8 py-4 bg-green-800 rounded-3xl text-white font-bold text-xl hover:scale-95' onClick={openReport}>Watch in AR</button>
         </div>
       </div>
