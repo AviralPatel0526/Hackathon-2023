@@ -16,7 +16,7 @@ function App() {
     <Route exact="true" path="/" element={<Home/>}/>
     <Route exact="true" path="/SignUp" element={<AuthForm/>}/>
     <Route exact="true" path="/Tenants" element={<Tenants/>}/>
-    <Route exact="true" path="/Owners" element={<Owners/>}/>
+    <Route exact="true" path="/Owners" element={<NewTenantForm/>}/>
     <Route exact="true" path="/NewTenantForm" element={<NewTenantForm/>}/>
     <Route exact="true" path="/TenantsList" element={<TenantsList/>}/>
     </Routes>

@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import house from "../assets/house.jpg";
+import house from "../assets/h2.jpg";
 import PanoramaViewer4 from '../PanoramaViewer/PanoramaViewer4';
 
 function TenantCard4() {
