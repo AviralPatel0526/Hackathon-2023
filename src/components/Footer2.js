@@ -3,8 +3,8 @@ import React from 'react'
 function Footer2() {
   return (
    <>
-   <div className='flex w-full justify-around md:h-[40vh] items-start
-   pt-20 bg-gray-500 text-white'>
+   <div className='lg:flex-row flex-col flex  w-full justify-around  md:h-[40vh]lg: items-start
+   pt-20 bg-gray-500 text-white pl-10 gap-8 pb-8 mt-10'>
     <div>
        <div className='pb-5'><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc57725c-8ab0-43ad-a8c1-24eb43956f47?apiKey=0e2d2b3fdaa848b2ac6dc9f62f11a5f8"/></div>
        <div><p>"Browse listings, book your dream home. Your perfect space awaits!"</p></div>
