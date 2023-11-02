@@ -30,26 +30,26 @@ function TenantCard(prop) {
     <div className="w-full h-full flex justify-center my-10">
       <div className=' bg-slate-400 w-[55%] h-[60vh] flex rounded-2xl shadow-2xl tcard' >
       <div className="w-[48%] h-full rounded-2xl flex justify-center items-center"> 
-        <img src={house} className='w-[80%] h-[80%] rounded-2xl'/>
+        <img src={prop.image} className='w-[80%] h-[80%] rounded-2xl'/>
       </div>
       <div className="w-[48%] h-full flex flex-col  items-start justify-evenly pl-5 rounded-2xl">
-        <div><p className='text-3xl font-bold'>Price: 34756</p></div>
+        <div><p className='text-3xl font-bold'>{prop.price}</p></div>
         <div className='flex gap-4 items-center '>
-         <div><h1  className='text-3xl font-bold'>2BHK</h1></div>
+         <div><h1  className='text-3xl font-bold'>{prop.size}</h1></div>
          <div>for rent</div>
          </div>
          <div className='flex gap-4'>
          <div className='flex gap-3'>
           <p>Owner Name:</p>
-          <p>Aviral Patel</p>
+          <p>{prop.ownername}</p>
          </div>
          <div className='flex gap-3'>
           <p>Carpet Area:</p>
-          <p>1234</p>
+          <p>{prop.area}</p>
          </div>
          </div>
         
-        <div>Address: Room no. 517 Sirpur Hostel, National Institute of Technology Raipur, Raipur.</div>
+        <div>Address: {prop.address}</div>
         <div></div>
         <div></div>
         <div className='flex gap-4' >
