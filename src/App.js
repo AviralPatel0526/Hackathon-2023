@@ -6,6 +6,7 @@ import AuthForm from './pages/AuthForm';
 import Tenants from './pages/Tenants';
 import Owners from './pages/Owners';
 import NewTenantForm from './pages/NewTenantForm';
+import TenantsList from './pages/TenantsList';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
     <Route exact="true" path="/Tenants" element={<Tenants/>}/>
     <Route exact="true" path="/Owners" element={<Owners/>}/>
     <Route exact="true" path="/NewTenantForm" element={<NewTenantForm/>}/>
+    <Route exact="true" path="/TenantsList" element={<TenantsList/>}/>
     </Routes>
     </BrowserRouter>
     </>

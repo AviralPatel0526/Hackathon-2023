@@ -41,17 +41,23 @@ function Tenants() {
             searchLowerCase === '' ||
             (tenant.Address?.toLowerCase().includes(searchLowerCase) ||
               tenant.Size?.toLowerCase().includes(searchLowerCase) ||
-              tenant.Rent?.toLowerCase().includes(searchLowerCase) ||
-              tenant.Facility?.toLowerCase().includes(searchLowerCase))
+              tenant.Price?.toLowerCase().includes(searchLowerCase) ||
+              tenant.Facility?.toLowerCase().includes(searchLowerCase)||
+              tenant.OwnerName?.toLowerCase().includes(searchLowerCase)||
+              tenant.Area?.toLowerCase().includes(searchLowerCase)
+              )
           );
         }).map((tenant) => {
         return (
           <TenantCard
           address={tenant.Address}
+          area={tenant.Area}
+          ownername={tenant.OwnerName}
           size={tenant.Size}
-          rent={tenant.Rent}
+          price={tenant.Price}
           facility={tenant.Facility}
           id={tenant.id}
+          image={tenant.ImageURL}
           />
         )
       })}
