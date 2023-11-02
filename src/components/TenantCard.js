@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { db } from '../config/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import PanoramaViewer from './PanoramaViewer';
+import house from "../assets/house.jpg";
+
 function TenantCard(prop) {
   const [showViewer, setShowViewer] = useState(false);
   const [filteredData, setFilteredData] = useState(null);
@@ -26,33 +28,33 @@ function TenantCard(prop) {
 
   return (
     <div className="w-full h-full flex justify-center my-10">
-      <div className=' bg-slate-400 w-[60%] h-[60vh] flex rounded-2xl'>
-      <div className="w-[37%] h-full rounded-2xl flex justify-center items-center"> 
-        <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcT49PBpnFBJNlDx_73B0CguaQy9vmF09quzI4ZKlBgWtAV1fSemOlKiHYXyS-O3HTw1aDWrf-dc-omXddw" alt="" className="h-[80%] w-[80%] rounded-2xl" />
+      <div className=' bg-slate-400 w-[55%] h-[60vh] flex rounded-2xl shadow-2xl tcard' >
+      <div className="w-[48%] h-full rounded-2xl flex justify-center items-center"> 
+        <img src={house} className='w-[80%] h-[80%] rounded-2xl'/>
       </div>
-      <div className="w-auto h-full flex flex-col  items-center rounded-2xl">
-        <div>Price: 34756</div>
-        <div className='flex gap-4'>
-         <div><h1>2BHK</h1></div>
+      <div className="w-[48%] h-full flex flex-col  items-start justify-evenly pl-5 rounded-2xl">
+        <div><p className='text-3xl font-bold'>Price: 34756</p></div>
+        <div className='flex gap-4 items-center '>
+         <div><h1  className='text-3xl font-bold'>2BHK</h1></div>
          <div>for rent</div>
          </div>
          <div className='flex gap-4'>
-         <div >
-          <p>Owner:</p>
-          <p>{prop.rent}</p>
+         <div className='flex gap-3'>
+          <p>Owner Name:</p>
+          <p>Aviral Patel</p>
          </div>
-         <div>
-          <p>Owner:</p>
-          <p>{prop.size}</p>
+         <div className='flex gap-3'>
+          <p>Carpet Area:</p>
+          <p>1234</p>
          </div>
          </div>
         
-        <div> adress: Nit raipur</div>
+        <div>Address: Room no. 517 Sirpur Hostel, National Institute of Technology Raipur, Raipur.</div>
         <div></div>
         <div></div>
-        <div  >
-          <button className='px-6 py-2 bg-green-400 rounded-3xl'>Details</button>
-          <button className='px-6 py-2 bg-green-600 rounded-3xl' onClick={() => openReport(prop.id)}>Watch in AR</button>
+        <div className='flex gap-4' >
+          <button className='px-8 py-4 bg-green-400 border-[2px] border-green-800 rounded-3xl text-xl text-green-900 font-bold hover:scale-95'>Details</button>
+          <button className='px-8 py-4 bg-green-800 rounded-3xl text-white font-bold text-xl hover:scale-95' onClick={() => openReport(prop.id)}>Watch in AR</button>
         </div>
       </div>
       </div>
