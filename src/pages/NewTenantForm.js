@@ -76,23 +76,47 @@ function NewTenantForm() {
 
   return (
   <>
-  
-  <div className='w-[80vw] h-[60vh] bg-slate-500 flex'>
-    <div className='w-[40vw] h-[60vh]' >
-        <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcT49PBpnFBJNlDx_73B0CguaQy9vmF09quzI4ZKlBgWtAV1fSemOlKiHYXyS-O3HTw1aDWrf-dc-omXddw" alt=""  className='w-[40vw] h-[60vh]'/>
-    </div>
-    <div className='w-[40vw] h-[60vh] flex flex-col justify-evenly items-center'>
-        <div><input onChange={(e) => setNewRent(e.target.value)} type="text" /></div>
-        <div><input onChange={(e) => setNewAddress(e.target.value)} type="text" /></div>
-        <div><input onChange={(e) => setNewSize(e.target.value)} type="text" /></div>
-        <div><input type="file"   onChange={(event) => {
-          setImageUpload(event.target.files[0]);
-        }} />select a file</div>
+  <div className='text-center flex flex-col gap-2 mt-3'>
+    <p className='text-3xl font-bold '>Want to Add Property</p>
+    <p>Fill The Given Form</p>
+  </div>
+  <div className='w-full h-[85vh] flex justify-center items-center'>    
+  <div className='w-[80vw] h-[80vh] bg-slate-400 flex rounded-3xl'>
+  <div className='w-[40vw] h-[80vh] flex flex-col justify-evenly items-center rounded-l-3xl'>
+        <div>
+          <p>Name :</p>
+          <input onChange={(e) => setNewRent(e.target.value)} type="text" className='w-[35vw] h-10 rounded-3xl' /></div>
         
-        <button onClick={uploadFile} className='p-2 bg-gray-300 text-gray-900  rounded-lg hover:scale-95'> Upload Image</button>
-        <div><button onClick={addNewTenant}>ADD</button>{formError && <p className='text-black font-bold'>{formError}</p>}
+        <div className='flex gap-6'>
+        <div>
+          <p>Size</p>
+          <input onChange={(e) => setNewAddress(e.target.value)} type="text" className='w-[17vw] h-10 rounded-3xl'/></div>
+        <div>
+          <p>Carpet Area:</p>
+          <input onChange={(e) => setNewSize(e.target.value)} type="text" className='w-[17vw] h-10 rounded-3xl'/></div>
+          </div>
+          <div>
+          <p>Price :</p>
+          <input onChange={(e) => setNewAddress(e.target.value)} type="text" className='w-[17vw] h-10 rounded-3xl'/></div>
+          <div>
+          <p>Address :</p>
+          <input onChange={(e) => setNewAddress(e.target.value)} type="text" className='w-[35vw] h-20 rounded-3xl'/></div>
+        <div><input type="file" onChange={(event) => {
+          setImageUpload(event.target.files[0]);
+        }} />Upload Image</div>
+        
+        <button onClick={uploadFile} className='px-14 py-2 bg-white text-gray-900  rounded-3xl hover:scale-95'>Upload</button>
+        <div><button onClick={addNewTenant} className='px-16 py-2 bg-white text-gray-900  rounded-3xl hover:scale-95'>ADD</button>{formError && <p className='text-black font-bold'>{formError}</p>}
         </div>
     </div>
+    <div className='w-[40vw] h-[80vh] rounded-r-3xl flex justify-center items-center' >
+        <div className='w-[30vw] h-[60vh] rounded-3xl'>
+        <p>Discription : </p>
+         <input type="text" className='h-[90%] w-full rounded-3xl'/>
+        </div>
+    </div>
+
+   </div>
    </div>
 
 
