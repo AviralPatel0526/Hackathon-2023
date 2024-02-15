@@ -4,7 +4,9 @@ import React, { useEffect, useState } from 'react';
 import house from "../assets/house.jpg";
 import PanoramaViewer1 from '../PanoramaViewer/PanoramaViewer1';
 import TextToSpeech from '../components/TextToSpeech'
+import { useNavigate } from 'react-router-dom';
 function TenantCard1() {
+  const navigate=useNavigate();
   const [showViewer, setShowViewer] = useState(false);
 
   const openReport = async () => {
@@ -19,6 +21,9 @@ function TenantCard1() {
     setShowViewer(false);
   }
   const Text ="This house was built in 2020, It is a 2BHK house with 2 bathroom and kitchen."
+  const openPayment=()=>{
+    navigate('/Payments')
+  }
 
   return (
     <div className="w-full h-full flex justify-center my-10">
@@ -50,6 +55,7 @@ function TenantCard1() {
         <div className='flex gap-4' >
         
           <button className='px-8 py-4 bg-green-800 rounded-3xl text-white font-bold text-xl hover:scale-95' onClick={openReport}>Watch in AR</button>
+          <button className='px-8 py-4 bg-green-800 rounded-3xl text-white font-bold text-xl hover:scale-95' onClick={openPayment}>Buy</button>
         </div>
       </div>
       </div>
