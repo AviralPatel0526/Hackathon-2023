@@ -26,9 +26,9 @@ const TextToSpeech = ({ text }) => {
   
 
   return (
-    <div>
+    <div className='h-[10vh] ' >
       <p>{text}</p>
-      <select value={selectedVoice ? selectedVoice.voiceURI : ''} onChange={handleVoiceChange}>
+      <select className='mb-[1vh] ' value={selectedVoice ? selectedVoice.voiceURI : ''} onChange={handleVoiceChange}>
   {voices.map((voice) => (
     <option key={voice.name} value={voice.voiceURI}>
       {voice.name}
@@ -37,8 +37,8 @@ const TextToSpeech = ({ text }) => {
 </select>
 
       <div className='flex gap-3'>
-        <button onClick={handleSpeak} className='p-1 bg-green-800 rounded-3xl text-white font-bold'>Speak</button>
-        <button onClick={handleCancel} className='px-2 bg-green-800 rounded-3xl text-white font-bold'>Stop</button>
+        <button onClick={handleSpeak} className='pl-[1vw] pr-[1vw] pt-2 pb-2 bg-green-800 rounded-2xl text-white font-bold'>Speak</button>
+        <button onClick={handleCancel} className='pl-[1vw] pr-[1vw] pt-2 pb-2 bg-green-800 rounded-2xl text-white font-bold'>Stop</button>
       </div>
     </div>
   );

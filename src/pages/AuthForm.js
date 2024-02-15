@@ -108,8 +108,10 @@ function AuthForm() {
   
 
   return (
-    <>
+    <div className='body' >
+    <div className='px-2  ' >
     <Navbar/>
+    </div>
    <div className='flex h-[90vh] w-[100%] items-center justify-center'>
     <div className={`container ${isSignUp ? 'right-panel-active' : ''}`}>
       <div className="form-container sign-up-container">
@@ -129,7 +131,7 @@ function AuthForm() {
                         onChange={handleChange}
                         onBlur={handleBlur}
             />{errors.name && touched.name ? (
-              <p className="form-error text-red-600">{errors.name}</p>
+              <p className="form-error text-blue-500">{errors.name}</p>
             ) : null}
             <input  className="signInput" type="email" placeholder="Email"
                       name="email"
@@ -137,7 +139,7 @@ function AuthForm() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       autoComplete='off'/>{errors.email && touched.email ? (
-                        <p className="form-error text-red-600">{errors.email}</p>
+                        <p className="form-error text-blue-500">{errors.email}</p>
                       ) : null}
             <input  className="signInput" type="password" placeholder="Password"
                      name="password"
@@ -146,9 +148,9 @@ function AuthForm() {
                        onChange={handleChange}
                      onBlur={handleBlur}
             />{errors.password && touched.password ? (
-              <p className="form-error text-red-600">{errors.password}</p>
+              <p className="form-error text-blue-500">{errors.password}</p>
             ) : null}
-             <button className='px-8 py-2 bg-orange-500 rounded-[25px] text-white'>Sign Up</button>
+             <button className='px-8 py-2 bg-blue-500 rounded-[25px] text-white'>Sign Up</button>
             <div>
                  <button onClick={handleGoogleSignUp} className="social px-10 py-1 rounded-[25px] border-[2px] border-black"><img src={googlelogo} alt="" /></button> 
                  </div>
@@ -169,7 +171,7 @@ function AuthForm() {
                 onChange={handleChangeSignIn}
                 onBlur={handleBlurSignIn}
             />{errorsSignIn.email && touchedSignIn.email ? (
-              <p className="form-error text-red-600">{errorsSignIn.email}</p>
+              <p className="form-error text-blue-600">{errorsSignIn.email}</p>
             ) : null}
             <input className="signInput"  type="password" placeholder="Password"
                   name="password"
@@ -177,10 +179,10 @@ function AuthForm() {
                   onChange={handleChangeSignIn}
                   onBlur={handleBlurSignIn}
             />{errorsSignIn.password && touchedSignIn.password ? (
-              <p className="form-error text-red-600">{errorsSignIn.password}</p>
+              <p className="form-error text-blue-600">{errorsSignIn.password}</p>
             ) : null}
             <a href="#">Forgot your password?</a>
-            <button className='px-8 py-2 bg-orange-500 rounded-[25px] text-white mt-4'>Sign In</button>
+            <button className='px-8 py-2 bg-blue-500 rounded-[25px] text-white mt-4'>Sign In</button>
            
                 <div>
                  <button onClick={handleGoogleSignUp} className="social px-10 py-1 rounded-[25px] border-[2px] border-black"><img src={googlelogo} alt="" /></button>
@@ -209,7 +211,7 @@ function AuthForm() {
       </div>
     </div>
     </div>
-    </>
+    </div>
   );
 }
 

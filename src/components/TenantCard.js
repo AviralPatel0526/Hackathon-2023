@@ -4,6 +4,7 @@ import { db } from '../config/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import PanoramaViewer from './PanoramaViewer';
 import house from "../assets/house.jpg";
+import TextToSpeech from './TextToSpeech'
 
 function TenantCard(prop) {
   const [showViewer, setShowViewer] = useState(false);
@@ -50,6 +51,7 @@ function TenantCard(prop) {
          </div>
         
         <div>Address: {prop.address}</div>
+        <div className='  ' ><TextToSpeech text={Text}/></div>
         <div></div>
         <div></div>
         <div className='flex gap-4' >

@@ -2,7 +2,10 @@
 
 
 
-
+.body{
+	background-image: url("https://media.istockphoto.com/id/1396454937/photo/family-with-kid-hiking-in-mountains-young-tourists-on-top-of-a-mountain-enjoying-valley-view.jpg?s=612x612&w=0&k=20&c=s1n4wlcCjAY_yCy0m9emeaforYLe2bbyY_2euc_yPIA=");
+	background-size: cover;
+}
 
 
 
@@ -19,7 +22,7 @@
 .ghost {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	background-color: rgb(59 130 246);
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -137,9 +140,9 @@
 }
 
 .overlay {
-	background:#f97316;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #ea580c,#fb923c);
+	background:rgb(59 130 246);
+	/* background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C); */
+	/* background: linear-gradient(to right, #ea580c,#fb923c); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;

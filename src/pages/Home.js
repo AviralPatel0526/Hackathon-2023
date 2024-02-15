@@ -8,6 +8,7 @@ import Carousel2 from '../sections/Carousal2'
 import Steps from '../sections/Steps'
 import Homesection3 from '../sections/Homesection3'
 import Footer2 from '../components/Footer2'
+// import Tenant from '../pages/Tenants.js'
 
 const Home = () => {
   return (
@@ -19,7 +20,7 @@ const Home = () => {
    <Steps/>
    <Homesection3/>
    {/* <Footer/> */}
-
+    {/* <Tenant/> */}
    <Footer2/>
    </>
   )

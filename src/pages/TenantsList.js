@@ -13,7 +13,7 @@ const TenantsList = () => {
 <div></div>
 <div><a href="/NewTenantForm"><button className='px-4 py-2 bg-green-800 rounded-3xl text-white font-bold text-xl hover:scale-95'>ADD NEW Tenant</button></a></div>
 </div>
-        <TenantCard1/>
+        {/* <TenantCard1/> */}
         <TenantCard2/>
         <TenantCard3/>
         <TenantCard4/>
