@@ -12,7 +12,7 @@ function Homesection1() {
           <Navbar/>
       </div>
       <div className=' top-0 z-[-1] ' >
-        <video autoPlay loop id="expert-video" muted playsInline poster="https://lonelyplanetstatic.imgix.net/marketing/best-in-travel/2024/campaign/hero-bit-2024.png?auto=format&amp;w=1920&amp;h=1080&amp;fit=crop&amp;q=40">
+        <video autoPlay loop id="expert-video" muted playsInline poster="https://storagecdn.propvr.ai/WebsiteAssets%2Fhero_video_thumbnail.webp?alt=media">
           <source src={video} type="video/mp4" />
           {/* <track kind="captions" /> */}
         </video>
