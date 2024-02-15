@@ -24,7 +24,7 @@ function Navbar() {
   
     return (
     <>
-    <div className='h-[10vh] flex justify-between items-center p-4'>
+    <div className='h-[10vh] bg-white w-[95vw] flex justify-between items-center p-4 rounded-lg '>
       <div><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc57725c-8ab0-43ad-a8c1-24eb43956f47?apiKey=0e2d2b3fdaa848b2ac6dc9f62f11a5f8"/></div>
       <div className='md:flex h-[10vh] justify-center items-center gap-14 hidden'>
         <div className='hover:scale-110'><a href="/">Home</a></div>
