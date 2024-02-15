@@ -39,7 +39,7 @@ function Navbar() {
     </div>
     {showMenu && (
     
-     <div className='flex justify-center items-center h-[90vh] w-[100vw] md:hidden'>
+     <div className='flex justify-center items-center h-[90vh] w-[98vw] md:hidden'>
      <div className='flex flex-col gap-8 text-center'>
      <div><a href="/"  className='font-semibold hover:scale-110'>Home</a></div>
      <div><a href="/TenantsList" className='font-semibold hover:scale-110'>For Tenants</a></div>

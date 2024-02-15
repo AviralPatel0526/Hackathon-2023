@@ -8,10 +8,10 @@ function Homesection1() {
   return (
     <div className='' >
       
-      <div className='absolute top-[1%] z-10 left-[2%] ' >
+      <div className='absolute top-[1%]  z-10 left-[2%] ' >
           <Navbar/>
       </div>
-      <div className=' top-0 z-[-1] ' >
+      <div className=' top-0 z-[-1]  ' >
         <video autoPlay loop id="expert-video" muted playsInline poster="https://storagecdn.propvr.ai/WebsiteAssets%2Fhero_video_thumbnail.webp?alt=media">
           <source src={video} type="video/mp4" />
           {/* <track kind="captions" /> */}
