@@ -1,7 +1,7 @@
 import React from 'react'
-import "./Homesection1.css"
+
 import Navbar from '../components/Navbar'
-import video from '../assets/video.mp4'
+import video from '../assets/video2.mov'
 // import Spline from '@splinetool/react-spline';
 
 function Homesection1() {
